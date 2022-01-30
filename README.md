@@ -1,4 +1,4 @@
-# # Real Estate SPA
+# Real Estate SPA
 
 ## Author - Devon Divinecz
 
