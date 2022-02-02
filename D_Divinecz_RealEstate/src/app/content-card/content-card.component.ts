@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
-import { ContentList } from '../helper-files/content-list';
 
 @Component({
   selector: 'app-content-card',
@@ -8,8 +7,6 @@ import { ContentList } from '../helper-files/content-list';
   styleUrls: ['./content-card.component.scss']
 })
 export class ContentCardComponent implements OnInit {
-
-  contentList: ContentList = new ContentList;
 
   houseOne: Content = {
     id: 1,
@@ -42,9 +39,6 @@ export class ContentCardComponent implements OnInit {
   };
 
   constructor() {
-    this.contentList.addContent(this.houseOne);
-    this.contentList.addContent(this.houseTwo);
-    this.contentList.addContent(this.houseThree);
   }
 
   ngOnInit(): void {
