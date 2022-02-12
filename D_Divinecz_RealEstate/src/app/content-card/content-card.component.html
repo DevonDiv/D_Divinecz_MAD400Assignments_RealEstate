@@ -1,1 +1,12 @@
-<p>Content Card Works!</p>
+<html lang="en">
+  <body>
+    <div class="content-card">
+      <h1>{{content.title | uppercase}}</h1>
+      <h3>{{content.creator}}</h3>
+      <img *ngIf="content.imgURL != ''" src="{{content.imgURL}}" alt="House">
+      <p>{{content.description}}</p>
+      <p *ngIf="content.type != ''">{{content.type}}</p>
+      <p *ngIf="content.tags != []">{{content.tags}}</p>
+    </div>
+  </body>
+</html>

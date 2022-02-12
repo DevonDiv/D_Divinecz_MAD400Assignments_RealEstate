@@ -1,11 +1,35 @@
-.content-card:first-child {
+app-content-card:first-child {
   border: 2px solid black;
 }
 
-.content-card {
+app-content-card {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+app-content-card.house {
+  background-color: cadetblue;
+  color: black;
+  font-family: fantasy, sans-serif;
+}
+
+app-content-card.apartment {
+  background-color: darkorange;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+app-content-card.condo {
+  background-color: darkgreen;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+app-content-card.no-type {
+  background-color: darkred;
+  color: black;
+  font-family: cursive;
 }

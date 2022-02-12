@@ -7,6 +7,10 @@ import { Content } from '../helper-files/content-interface'
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
+  title: string = '';
+  searchTerm: string = '';
+  foundTitle: boolean = false;
+  message: string = '';
 
   contentList: Content[] = [
     {
@@ -15,7 +19,7 @@ export class ContentListComponent implements OnInit {
       description: 'House 1 Description',
       creator: 'Devon Divinecz',
       imgURL: '',
-      type: '',
+      type: 'House',
       tags: []
     },
     {
@@ -24,7 +28,7 @@ export class ContentListComponent implements OnInit {
       description: 'House 2 Description',
       creator: 'Devon Divinecz',
       imgURL: '',
-      type: '',
+      type: 'Condo',
       tags: []
     },
     {
@@ -33,7 +37,7 @@ export class ContentListComponent implements OnInit {
       description: 'House 3 Description',
       creator: 'Devon Divinecz',
       imgURL: '',
-      type: '',
+      type: 'Apartment',
       tags: []
     },
     {
@@ -60,7 +64,25 @@ export class ContentListComponent implements OnInit {
       description: 'House 6 Description',
       creator: 'Devon Divinecz',
       imgURL: '',
-      type: '',
+      type: 'Apartment',
+      tags: []
+    },
+    {
+      id: 7,
+      title: 'House 7',
+      description: 'House 7 Description',
+      creator: 'Devon Divinecz',
+      imgURL: '',
+      type: 'Condo',
+      tags: []
+    },
+    {
+      id: 8,
+      title: 'House 8',
+      description: 'House 8 Description',
+      creator: 'Devon Divinecz',
+      imgURL: '',
+      type: 'House',
       tags: []
     }
   ];
@@ -70,6 +92,19 @@ export class ContentListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  filterContent(title: string) {
+    for (let i = 0; i < this.contentList.length; i++) {
+      if (this.contentList[i].title === title) {
+        this.foundTitle = true;
+        this.title = title;
+        this.message = 'Property Found';
+        return;
+      } else {
+        this.message = 'Property Not Found';
+      }
+    }
   }
 
 }

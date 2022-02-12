@@ -1,12 +1,9 @@
-<html lang="en">
-  <body>
-    <div class="content-card" *ngFor="let content of contentList">
-      <h1>{{content.title}}</h1>
-      <h3>{{content.creator}}</h3>
-      <img *ngIf="content.imgURL != ''" src="{{content.imgURL}}" alt="House">
-      <p>{{content.description}}</p>
-      <p *ngIf="content.type != ''">{{content.type}}</p>
-      <p *ngIf="content.tags != []">{{content.tags}}</p>
-    </div>
-  </body>
-</html>
+<h3>Enter your search term</h3>
+<input #checkTitle>
+<button (click)="filterContent(checkTitle.value)">Search</button>
+<h4>{{ message }}</h4>
+
+<app-content-card class="house" *ngFor="let item of contentList | contentType: 'House'" [content]="item"></app-content-card>
+<app-content-card class="apartment" *ngFor="let item of contentList | contentType: 'Apartment'" [content]="item"></app-content-card>
+<app-content-card class="condo" *ngFor="let item of contentList | contentType: 'Condo'" [content]="item"></app-content-card>
+<app-content-card class="no-type" *ngFor="let item of contentList | contentType: ''" [content]="item"></app-content-card>
