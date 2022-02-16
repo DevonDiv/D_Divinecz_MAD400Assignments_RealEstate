@@ -20,7 +20,7 @@ export class ContentListComponent implements OnInit {
       creator: 'Devon Divinecz',
       imgURL: '',
       type: 'House',
-      tags: []
+      tags: ['big', 'expensive', 'nice']
     },
     {
       id: 2,
