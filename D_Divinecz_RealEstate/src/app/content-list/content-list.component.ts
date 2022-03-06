@@ -107,4 +107,9 @@ export class ContentListComponent implements OnInit {
     }
   }
 
+  addHouse(newHouse: Content) {
+    this.contentList.push(newHouse);
+    this.contentList = Object.assign([], this.contentList);
+  }
+
 }
