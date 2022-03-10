@@ -1,6 +1,7 @@
 <h3>Enter your search term</h3>
 <input #checkTitle>
-<button (click)="filterContent(checkTitle.value)">Search</button>
+<!-- <button (click)="filterContent(checkTitle.value)">Search</button> -->
+<button>Search</button>
 <h4>{{ message }}</h4>
 
 <app-content-card class="house" *ngFor="let item of contentList | contentType: 'House'" [content]="item"></app-content-card>

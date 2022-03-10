@@ -1,0 +1,12 @@
+.house {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px black;
+}
+
+form {
+  margin-bottom: 1%;
+}
