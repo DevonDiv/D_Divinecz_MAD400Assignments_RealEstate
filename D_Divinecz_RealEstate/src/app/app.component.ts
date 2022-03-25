@@ -15,16 +15,4 @@ export class AppComponent {
   contentList: Content[] = [];
 
   constructor(private houseService: HouseService) { }
-
-  findHouse(id: string) {
-    this.houseId = parseInt(id);
-    this.contentList = this.houseService.getContentList();
-    if (this.houseId >= 0 && this.houseId < this.contentList.length) {
-      this.houseService.getContentByID(this.houseId).subscribe(content => {
-        this.content = content;
-      });
-    } else {
-      return
-    }
-  }
 }

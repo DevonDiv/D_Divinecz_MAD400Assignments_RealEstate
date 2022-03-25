@@ -21,8 +21,9 @@ export class ContentListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.houseService.getContentObservable().subscribe(content =>
-      this.contentList = content);
+    // this.houseService.getContentObservable().subscribe(content =>
+    //   this.contentList = content);
+    this.getContentFromServer();
   }
 
   // filterContent(title: string) {
@@ -37,5 +38,17 @@ export class ContentListComponent implements OnInit {
   //     }
   //   }
   // }
+
+  getContentFromServer(): void {
+    this.houseService.getContentList().subscribe(content =>
+      this.contentList = content);
+  }
+
+  addContentToList(content: Content): void {
+    this.houseService.addContent(content).subscribe(newContent => {
+      this.contentList.push(newContent);
+      this.contentList = [...this.contentList];
+    });
+  }
 
 }
