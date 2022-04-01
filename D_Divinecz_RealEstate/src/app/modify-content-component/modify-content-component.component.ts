@@ -44,6 +44,7 @@ export class AddFormDialogComponent implements OnInit {
   @Output() addContentEvent: EventEmitter<Content> = new EventEmitter<Content>();
 
   newContent?: Content;
+  isLoading = false;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: Content) { }
 
@@ -61,6 +62,7 @@ export class AddFormDialogComponent implements OnInit {
       tags: tags.split(",")
     };
     this.addContentEvent.emit(this.newContent);
+    this.isLoading = true;
   }
 
 }
