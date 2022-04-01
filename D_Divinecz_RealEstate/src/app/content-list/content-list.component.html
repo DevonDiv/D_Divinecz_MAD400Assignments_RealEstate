@@ -1,8 +1,11 @@
 <app-modify-content-component (addContentEvent)="addContentToList($event)"></app-modify-content-component>
-<h3>Enter your search term</h3>
-<input #checkTitle>
+<mat-form-field appearance="fill">
+  <mat-label>Enter your search term</mat-label>
+  <input matInput #checkTitle>
+</mat-form-field>
+
 <!-- <button (click)="filterContent(checkTitle.value)">Search</button> -->
-<button>Search</button>
+<button mat-raised-button color="primary">Search</button>
 <h4>{{ message }}</h4>
 
 <app-content-card class="house" *ngFor="let item of contentList | contentType: 'House'" [content]="item"></app-content-card>

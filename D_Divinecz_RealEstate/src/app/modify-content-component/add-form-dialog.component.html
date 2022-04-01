@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>Add House</h1>
+<div mat-dialog-content>
+  <form>
+  <mat-form-field appearance="fill">
+    <mat-label>ID</mat-label>
+    <input matInput type="number" #id disabled>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput type="text" #title>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <input matInput  type="text" #description>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Creator</mat-label>
+    <input matInput  type="text"  #creator>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Image URL</mat-label>
+    <input matInput  type="text"  #imgUrl>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Type</mat-label>
+    <input matInput  type="text"  #type>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Tags</mat-label>
+    <input matInput  type="text" #tags>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="addContent(title.value, description.value, creator.value, imgUrl.value, type.value, tags.value)" [mat-dialog-close]="data">Add House</button>
+  <button mat-raised-button mat-dialog-close color="warn">Cancel</button>
+</form>
+</div>
+

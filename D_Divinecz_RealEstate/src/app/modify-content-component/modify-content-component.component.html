@@ -1,8 +1,4 @@
 <br>
-<input type="text" placeholder="Title" #title>
-<input type="text" placeholder="Description" #description>
-<input type="text" placeholder="Creator" #creator>
-<input type="text" placeholder="Image" #imgUrl>
-<input type="text" placeholder="Type" #type>
-<input type="text" placeholder="Tags" #tags>
-<button (click)="addContent(title.value, description.value, creator.value, imgUrl.value, type.value, tags.value)">Add House</button>
+<button mat-raised-button color="primary" (click)="openDialog()">Add New House</button>
+<br>
+<br>
