@@ -5,7 +5,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
-
+import {MatRippleModule} from '@angular/material/core';
 
 
 @NgModule({
@@ -15,7 +15,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatExpansionModule,
     MatDialogModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatRippleModule
   ]
 })
 export class AngularMaterialModule { }

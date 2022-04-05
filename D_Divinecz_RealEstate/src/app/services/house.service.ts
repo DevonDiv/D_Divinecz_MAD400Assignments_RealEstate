@@ -39,11 +39,9 @@ export class HouseService {
     return this.http.get<Content[]>("api/content");
   }
 
-  // getContentById(id: number): Observable<Content[]> {
-  //   const content = of(contentList.filter(content => content.id === id));
-  //   this.messageService.add(`Content Item at id: ${id}`);
-  //   return content;
-  // }
+  getContentById(id: number): Observable<Content> {
+    return this.http.get<Content>("api/content/" + id);
+  }
 
   addContent(content: Content): Observable<Content> {
     return this.http.post<Content>("api/content", content, this.httpOptions);

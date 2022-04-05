@@ -13,8 +13,11 @@ import { HoverAffectDirective } from './hover-affect.directive';
 import { MessagesComponent } from './messages/messages.component';
 import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularMaterialModule } from './angular-material.module';
 import { AddFormDialogComponent } from './modify-content-component/modify-content-component.component';
+import { DetailViewComponent } from './detail-view/detail-view.component';
+import { AngularMaterialModule } from './angular-material.module';
+import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import { AddFormDialogComponent } from './modify-content-component/modify-conten
     HoverAffectDirective,
     MessagesComponent,
     ModifyContentComponentComponent,
-    AddFormDialogComponent
+    AddFormDialogComponent,
+    DetailViewComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,8 @@ import { AddFormDialogComponent } from './modify-content-component/modify-conten
       dataEncapsulation: false, delay: 500
     }),
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

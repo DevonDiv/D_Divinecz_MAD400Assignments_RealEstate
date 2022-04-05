@@ -2,8 +2,6 @@
     <input type="number" placeholder="Enter ID" #id>
     <button (click)="findHouse(id.value)">Search</button>
 </form> -->
-<div *ngIf="houseId != -1">
-  <app-content-card class="house" *ngFor="let item of content" [content]="item"></app-content-card>
-</div>
 <app-messages></app-messages>
-<app-content-list></app-content-list>
+<router-outlet></router-outlet>
+<!-- <app-content-list></app-content-list> -->

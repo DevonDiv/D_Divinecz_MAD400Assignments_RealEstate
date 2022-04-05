@@ -8,9 +8,7 @@
       <h3>{{content.creator}}</h3>
       <img *ngIf="content.imgURL != ''" src="{{content.imgURL}}" alt="House">
       <img *ngIf="content.imgURL == ''" src="https://static.onecms.io/wp-content/uploads/sites/37/2016/02/15230656/white-modern-house-curved-patio-archway-c0a4a3b3.jpg" alt="House">
-      <p>{{content.description}}</p>
-      <p id="type" appHoverAffect *ngIf="content.type != ''">{{content.type}}</p>
-      <p id="tag" appHoverAffect *ngIf="content.tags != []">{{content.tags}}</p>
+      <button mat-raised-button color="accent" routerLink="/content/{{content.id}}">View Details</button>
     </mat-card>
   </mat-expansion-panel>
 </mat-accordion>
