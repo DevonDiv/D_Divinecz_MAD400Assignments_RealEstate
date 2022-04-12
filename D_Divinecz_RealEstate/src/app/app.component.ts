@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 
 import { Content } from './helper-files/content-interface';
 import { HouseService } from './services/house.service';
+import { UpdateService } from './services/update.service';
 
 @Component({
   selector: 'app-root',
